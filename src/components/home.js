@@ -1,32 +1,21 @@
 import React from 'react';
-import { Alert } from 'antd';
+import MyMap from './myMap';
+import Help from './help';
+import Big from '../res/img1.jpg'
 
-const Home = () => {
-    return (
-        <div>
+class Home extends React.Component {
+
+    render() {
+        return (
             <div>
-                Lejla
+                <div >
+                   <img src={Big} alt="Big" style = {{width: '100%'}}  />
+                </div>
+                <MyMap/>
             </div>
-            <Alert
-                message="Creators"
-                description="Jasmin Bajrić, Lejla Mehmedagić, Arslan Turkušić, Venesa Šeremet, Adna Ćatić, Sara Makešoska-Džebo"
-                type="info"
-            />
-            <Alert
-                message="Goals"
-                description="Our experience is basically addressed to support
-                company in its challenges,
-                working side by side with entepreneur and company managers. Our goals are to make our costumers happy and satisfied. "
-                type="info"
-            />
-            <Alert
-                message="Contact Us"
-                description="E-mail: merchantservice@gmail.com"
-                type="info"
-            />
-        </div>
 
-    );
+        );
+    }
 };
 
 export default Home;
