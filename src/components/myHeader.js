@@ -19,8 +19,7 @@ const { SubMenu } = Menu;
 
 const MyHeader = () => {
     return (
-        <Header id="header">
-
+        <Header id="header" style = {{}} >
             <div className="logo" />
 
             <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>

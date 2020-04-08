@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Layout} from 'antd';
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { Layout } from 'antd';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //components
 import Home from './components/home';
@@ -13,19 +13,19 @@ import Products from './components/products';
 import Help from './components/help';
 import NotFound from './components/notFound';
 
-const {Content} = Layout;
+const { Content } = Layout;
 
 function App() {
   return (
+
     <BrowserRouter>
       <Layout className="layout">
-                
-      <MyHeader/>
+        <MyHeader />
 
-        <Content style={{ padding: '0 50px',  margin: '16px 0' }}>
+        <Content style={{}}>
 
-  {/* <div className="site-layout-content">Content</div> */}
-          <Content id="bodyMain">
+          {/* <div className="site-layout-content">Content</div> */}
+          <Content id="bodyMain" style = {{width: '100%'}}>
 
             <Switch>
               <Route exact path="/" component={Home} />
@@ -38,12 +38,13 @@ function App() {
 
           </Content>
         </Content>
-      </Layout>
-      <MyFooter/>
 
+        <MyFooter />
+
+      </Layout>
     </BrowserRouter>
-    
-    
+
+
   );
 }
 
