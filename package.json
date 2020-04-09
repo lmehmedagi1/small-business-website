@@ -12,6 +12,8 @@
     "google-maps-react": "^2.0.2",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
