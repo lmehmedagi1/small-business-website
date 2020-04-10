@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
-import Navbar from './navbar'
+import MyMenu from './menu';
+
 
 const { Header } = Layout;
 
@@ -8,7 +9,7 @@ const MyHeader = () => {
     return (
         <Header id="header" style={{ verticalAlign: 'middle'}} >
 
-            <Navbar/>
+            <MyMenu />  
 
         </Header>
     )
