@@ -20,8 +20,6 @@ class MyMenu extends Component {
     render() {
         return (
 
-
-
             <Menu id="menuVertical" theme="dark" mode="vertical" defaultSelectedKeys={['1']} style={{
                 float: "left",
                 textAlign: "left"
