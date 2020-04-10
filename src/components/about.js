@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
     return (
         <div id = "container">
+
+                <Helmet>
+                    <title>O nama | Facit</title>
+                </Helmet>
 
             <h1> NAŠ PROFIL</h1>
             <p>

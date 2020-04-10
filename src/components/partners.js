@@ -1,21 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const Products = () => {
+const Partners = () => {
     return (
         <div>
 
-
-
                 <Helmet>
-                    <title>Proizvodi | Facit</title>
+                    <title>Partneri | Facit</title>
                 </Helmet>
 
 
-            MALO NEŠTO O NAŠIM PROIZVODIMA
+
+            MALO NEŠTO O NAŠIM PARTNERIMAAAAAAAAAA
         </div>
 
     );
 };
 
-export default Products;
+export default Partners;

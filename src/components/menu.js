@@ -26,7 +26,9 @@ class MyMenu extends Component {
             <div id="menuContainer">
 
                 <div style={{ float: 'left', width: '10%', textAlign: 'left' }}>
-                    <img src={Logo} alt="Logo" />
+                    <a  href="mailto:facit@facit.ba">
+                        <img  src={Logo} alt="Logo"/> 
+                    </a>
                 </div>
 
                 <div style={{ float: 'right', width: '10%', fontSize: '20pt' }}>
@@ -43,11 +45,11 @@ class MyMenu extends Component {
                     <Menu.Item id="menuItem" key="1">
                         <Link to="/">
                             Naslovna
-                </Link>
+                        </Link>
                     </Menu.Item>
 
                     <SubMenu
-                        key="sub1"
+                        key="2"
                         title={
                             <span>
                                 <span> Proizvodi </span>
@@ -55,45 +57,41 @@ class MyMenu extends Component {
                             </span>
                         }
                     >
-                        <Menu.Item id="submenuItem" key="11"> <ApartmentOutlined /> Multifunkcionalni sistemi</Menu.Item>
-                        <Menu.Item id="submenuItem" key="12"> <PrinterOutlined /> Printeri</Menu.Item>
-                        <Menu.Item id="submenuItem" key="13"> <ScanOutlined /> Skeneri</Menu.Item>
+                        <Menu.Item id="submenuItem" key="21"> <ApartmentOutlined /> Multifunkcionalni sistemi</Menu.Item>
+                        <Menu.Item id="submenuItem" key="22"> <PrinterOutlined /> Printeri</Menu.Item>
+                        <Menu.Item id="submenuItem" key="23"> <ScanOutlined /> Skeneri</Menu.Item>
                     </SubMenu>
 
-                    <Menu.Item id="menuItem" key="2">
+                    <Menu.Item id="menuItem" key="3">
                         <Link to="/support">
                             Podrška
-                </Link>
+                        </Link>
                     </Menu.Item>
 
-                    <SubMenu
-                        key="sub2"
-                        title={
 
-                            <span>
-                                <span> O nama </span>
-                                <CaretDownOutlined />
-                            </span>
-                        }
-                    >
-                        <Menu.Item id="submenuItem" key="15"> <HomeOutlined /> Profil
-                    <Link to="/about"> </Link></Menu.Item>
-                        <Menu.Item id="submenuItem" key="16"> <TeamOutlined /> Partneri</Menu.Item>
-                        <Menu.Item id="submenuItem" key="17"> <StarOutlined /> Karijera</Menu.Item>
-                        <Menu.Item id="submenuItem" key="18"> <WechatFilled /> Novosti</Menu.Item>
-                        <Menu.Item id="submenuItem" key="29"> <MailOutlined /> Kontakt</Menu.Item>
-                    </SubMenu>
+                    <Menu.Item id="menuItem" key="4">
+                        <Link to="/partners">
+                            Partneri
+                        </Link>
+                    </Menu.Item>
 
                     <Menu.Item id="menuItem" key="5">
                         <Link to="/references">
                             Reference
-                </Link>
+                        </Link>
                     </Menu.Item>
 
+
                     <Menu.Item id="menuItem" key="6">
+                        <Link to="/about">
+                            O nama
+                        </Link>
+                    </Menu.Item>
+
+                    <Menu.Item id="menuItem" key="7">
                         <Link to="/help">
                             Pomoć
-                </Link>
+                        </Link>
                     </Menu.Item>
 
                 </Menu>
