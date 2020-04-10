@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Button } from 'antd';
 import { Link } from "react-router-dom";
+import Logo from '../res/logo.png';
 
 import {
     CaretDownOutlined,
@@ -14,14 +15,30 @@ import {
     ApartmentOutlined
 } from '@ant-design/icons'
 
+
+
+
 const { SubMenu } = Menu;
 
 class MyMenu extends Component {
     render() {
         return (
+            <div id="menuContainer">
 
-            <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style = {{float:"right",
-            textAlign: "right"}}>
+            <div style={{float: 'left', width: '10%', textAlign: 'left'}}> 
+                <img  src={Logo} alt="Logo"/> 
+            </div>
+
+            <div style={{float: 'right', width: '10%', fontSize: '20pt'}}> 
+                <a target="_blank" rel="noopener noreferrer" href="mailto:facit@facit.ba">
+                <MailOutlined />
+                </a>
+            </div>
+                
+
+
+            
+            <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
 
                 <Menu.Item id="menuItem" key="1">
                     <Link to="/">
@@ -79,6 +96,11 @@ class MyMenu extends Component {
                 </Menu.Item>
 
             </Menu>
+
+
+            
+
+            </div>
     );
     }
 } export default MyMenu;
