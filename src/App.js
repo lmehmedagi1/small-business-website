@@ -12,6 +12,8 @@ import References from './components/references';
 import Products from './components/products';
 import Help from './components/help';
 import NotFound from './components/notFound';
+import Partners from './components/partners';
+import Support from './components/support';
 
 
 const { Content } = Layout;
@@ -34,6 +36,8 @@ function App() {
               <Route exact path="/help" component={Help} />
               <Route exact path="/products" component={Products} />
               <Route exact path="/references" component={References} />
+              <Route exact path="/partners" component={Partners} />
+              <Route exact path="/support" component={Support} />
               <Route path="*" component={NotFound} />
             </Switch>
 
