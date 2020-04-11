@@ -1,5 +1,4 @@
 import React from 'react';
-import MyGallery from './myGallery';
 import { Helmet } from 'react-helmet';
 
 const Support = () => {
