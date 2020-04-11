@@ -8,11 +8,9 @@ import {
     MailOutlined,
     PrinterOutlined,
     ScanOutlined,
-    TeamOutlined,
-    WechatFilled,
-    HomeOutlined,
-    StarOutlined,
-    ApartmentOutlined
+    ApartmentOutlined,
+    LaptopOutlined,
+    SwitcherOutlined
 } from '@ant-design/icons'
 
 
@@ -57,9 +55,11 @@ class MyMenu extends Component {
                             </span>
                         }
                     >
-                        <Menu.Item id="submenuItem" key="21"> <ApartmentOutlined /> Multifunkcionalni sistemi</Menu.Item>
-                        <Menu.Item id="submenuItem" key="22"> <PrinterOutlined /> Printeri</Menu.Item>
-                        <Menu.Item id="submenuItem" key="23"> <ScanOutlined /> Skeneri</Menu.Item>
+                        <Menu.Item id="submenuItem" key="21"> <PrinterOutlined /> Štampači </Menu.Item>
+                        <Menu.Item id="submenuItem" key="22"> <ApartmentOutlined /> Multifunkcionalni uređaji </Menu.Item>
+                        <Menu.Item id="submenuItem" key="23"> <SwitcherOutlined /> Produkcijski uređaji </Menu.Item>
+                        <Menu.Item id="submenuItem" key="24"> <LaptopOutlined  /> IT oprema </Menu.Item>
+                        <Menu.Item id="submenuItem" key="25"> <ScanOutlined /> Potrošni materijal </Menu.Item>
                     </SubMenu>
 
                     <Menu.Item id="menuItem" key="3">
@@ -85,12 +85,6 @@ class MyMenu extends Component {
                     <Menu.Item id="menuItem" key="6">
                         <Link to="/about">
                             O nama
-                        </Link>
-                    </Menu.Item>
-
-                    <Menu.Item id="menuItem" key="7">
-                        <Link to="/help">
-                            Pomoć
                         </Link>
                     </Menu.Item>
 
