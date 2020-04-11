@@ -1,89 +1,100 @@
-
 import React from 'react';
-import { List } from 'antd';
 import { Helmet } from 'react-helmet';
-
-import Xerox from '../res/xeroxBP.jpg';
-import Canon from '../res/canonBP.jfif';
-import Kyocera from '../res/kyoceraBP.png';
-import Microsoft from '../res/microsoftBP.png';
-import Dell from '../res/dellBP.png';
-
-
-const myStyle = {
-
-    width: '250px',
-    height: '170px',
-    margin: '20px',
-    borderStyle: 'solid',
-    borderColor: 'grey',
-}
+import { List } from 'antd';
+import Dell from '../res/Partneri/dellBP.png';
+import Epson from '../res/Partneri/epson.jpg';
+import HP from '../res/Partneri/hp.jpg';
+import Lenovo from '../res/Partneri/lenovo.png';
+import MC from '../res/Partneri/microsoftBP.png';
+import PC from '../res/Partneri/pc.jpg';
+import Xerox from '../res/Partneri/xeroxBP.jpg';
 
 
-const Partners = () => {
 
-    const data = [
+const newData =
+    [
         {
-            render: () => (<a href="https://www.xerox.com/" target="_blank">
-                <img style={myStyle} src={Xerox} alt="Xerox" />
-            </a>)
+            src: Dell,
+            alt: "Dell",
+            link: "https://www.dell.com"
         },
         {
-            render: () => (<a href="https://europe.kyocera.com/" target="_blank">
-                <img style={myStyle} src={Kyocera} alt="Kyocera" />
-            </a>)
+            src: Epson,
+            alt: "Epson",
+            link: "https://www.epson.eu/"
         },
         {
-            render: () => (<a href="https://www.canon.ba/" target="_blank">
-                <img style={myStyle} src={Canon} alt="Canon" />
-            </a>
-            )
+            src: HP,
+            alt: "HP",
+            link: "https://www8.hp.com/us/en/home.html"
         },
         {
-            render: () => (<a href="https://www.microsoft.com/bs-ba" target="_blank">
-                <img style={myStyle} src={Microsoft} alt="Microsoft" />
-            </a>)
+            src: Lenovo,
+            alt: "Lenovo",
+            link: "https://www.lenovo.com/us/en/"
         },
         {
-            render: () => (<a href="http://www1.euro.dell.com" target="_blank">
-                <img style={myStyle} src={Dell} alt="Dell" />
-            </a>)
+            src: MC,
+            alt: "Microsoft",
+            link: "https://www.microsoft.com/bs-ba/"
+        },
+        {
+            src: PC,
+            alt: "Paper Cut",
+            link: "https://www.papercut.com/"
+        },
+        {
+            src: Xerox,
+            alt: "Xerox",
+            link: "https://www.xerox.com/"
         }
-    ];
+    ]
+class References extends React.Component {
 
-    return (
-        <div>
-            <Helmet>
-                <title> Partneri | Facit </title>
-            </Helmet>
+    state = {
 
-            <h1 style={{ textAlign: 'center' }}> NAŠI PARTNERI</h1>
+        data: []
+    }
 
-            <div id="grid">
-                <div style={{ textAlign: 'center' }}>
-                    <List
-                        grid={{
+    componentDidMount() {
+        this.setState({ data: newData })
+    }
 
-                            gutter: 16,
-                            column: 4,
-                            justify: 'center'
-                        }}
+    render() {
+        return (
+            <div>
 
-                        dataSource={data}
+                <Helmet>
+                    <title> Pertneri | Facit</title>
+                </Helmet>
 
-                        renderItem={item => (
-                            <div id="reference" >
-                                {item.render()}
-                            </div>
-                        )}
-                    />
+
+                <h1 style={{ textAlign: 'center' }}> NAŠE REFERENCE</h1>
+                <div id="grid">
+                    <div style={{ textAlign: 'center' }}>
+                        <List
+                            grid={{
+                                gutter: 16,
+                                column: 4,
+                                justify: 'center'
+                            }}
+
+                            dataSource={this.state.data}
+                            renderItem={item => (
+                                <div id="reference" >
+                                    <a href={item.link} target="_blank">
+                                        <img id = "slika"  src={item.src} alt={item.alt} key={item.src} />
+                                    </a>
+
+                                </div>
+                            )}
+                        />
+                    </div>
                 </div>
             </div>
 
-        </div>
-
-
-    );
+        );
+    }
 };
 
-export default Partners;
+export default References;
