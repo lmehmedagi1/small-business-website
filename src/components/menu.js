@@ -19,7 +19,26 @@ import {
 const { SubMenu } = Menu;
 
 class MyMenu extends Component {
+
+    state = {
+        currentLocation: ''
+    }
+
+    clickedMenu = () => {
+        let href=window.location.href.split('/');
+        href=href[href.length - 1];
+        this.setState({currentLocation: href});
+    }
+
+    componentWillMount() {
+        let href=window.location.href.split('/');
+        href=href[href.length - 1];
+        this.setState({currentLocation: href});
+    }
+
+
     render() {
+
         return (
             <div id="menuContainer">
 
@@ -38,16 +57,16 @@ class MyMenu extends Component {
 
 
 
-                <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+                <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['/' + this.state.currentLocation]} selectedKeys={['/' + this.state.currentLocation]} onClick = {() => {this.clickedMenu();}}>
 
-                    <Menu.Item id="menuItem" key="1">
+                    <Menu.Item id="menuItem" key='/'>
                         <Link to="/">
                             Naslovna
                         </Link>
                     </Menu.Item>
 
                     <SubMenu
-                        key="2"
+                        key='/products'
                         title={
                             <span>
                                 <span> Proizvodi </span>
@@ -55,34 +74,35 @@ class MyMenu extends Component {
                             </span>
                         }
                     >
-                        <Menu.Item id="submenuItem" key="21"> <PrinterOutlined /> Štampači </Menu.Item>
+                        <Menu.Item id="submenuItem" key="ovdje kad se path promijeni"> <PrinterOutlined /> Štampači </Menu.Item>
                         <Menu.Item id="submenuItem" key="22"> <ApartmentOutlined /> Multifunkcionalni uređaji </Menu.Item>
                         <Menu.Item id="submenuItem" key="23"> <SwitcherOutlined /> Produkcijski uređaji </Menu.Item>
                         <Menu.Item id="submenuItem" key="24"> <LaptopOutlined  /> IT oprema </Menu.Item>
                         <Menu.Item id="submenuItem" key="25"> <ScanOutlined /> Potrošni materijal </Menu.Item>
                     </SubMenu>
 
-                    <Menu.Item id="menuItem" key="3">
+                    <Menu.Item id="menuItem" key='/support'>
                         <Link to="/support">
+                            {console.log(window.location.href)}
                             Podrška
                         </Link>
                     </Menu.Item>
 
 
-                    <Menu.Item id="menuItem" key="4">
+                    <Menu.Item id="menuItem" key='/partners'>
                         <Link to="/partners">
                             Partneri
                         </Link>
                     </Menu.Item>
 
-                    <Menu.Item id="menuItem" key="5">
+                    <Menu.Item id="menuItem" key='/references'>
                         <Link to="/references">
                             Reference
                         </Link>
                     </Menu.Item>
 
 
-                    <Menu.Item id="menuItem" key="6">
+                    <Menu.Item id="menuItem" key='/about'>
                         <Link to="/about">
                             O nama
                         </Link>
