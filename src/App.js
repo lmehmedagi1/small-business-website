@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Layout } from 'antd';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Headroom from 'react-headroom';
 
 //components
 import Home from './components/home';
@@ -23,7 +24,10 @@ function App() {
 
     <BrowserRouter>
       <Layout className="layout">
-        <MyHeader />
+      <Headroom>
+      <MyHeader />
+      </Headroom>
+        
 
         <Content style={{}}>
 
