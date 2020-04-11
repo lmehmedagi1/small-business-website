@@ -26,7 +26,7 @@ class MyMenu extends Component {
             <div id="menuContainer">
 
                 <div style={{ float: 'left', width: '10%', textAlign: 'left' }}>
-                    <a  href="mailto:facit@facit.ba">
+                    <a  href="/">
                         <img  src={Logo} alt="Logo"/> 
                     </a>
                 </div>
