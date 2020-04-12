@@ -11,10 +11,17 @@ const { Footer } = Layout;
 const MyFooter = () => {
     return (
         <div style={{
-            margin: '0 auto'
+            margin: '0 auto',
+            backgroundColor: '#001529',
+            width: '100%',
+            marginTop: '3%',
+            bottom: '0px'
         }}>
         <Footer style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            backgroundColor: '#001529',
+            color: 'white',
+            bottom: '0px'
         }}>
            
             <div> 
