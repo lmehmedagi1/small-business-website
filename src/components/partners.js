@@ -69,7 +69,11 @@ class References extends React.Component {
                 </Helmet>
 
 
-                <h1 style={{ textAlign: 'center' }}> NAŠE REFERENCE</h1>
+                <h1  id = "naslov" > NAŠI PARTNERI
+                <hr></hr>
+                </h1>
+          
+
                 <div id="grid">
                     <div style={{ textAlign: 'center' }}>
                         <List
