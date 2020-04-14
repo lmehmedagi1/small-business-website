@@ -286,8 +286,10 @@ class References extends React.Component {
                     <title>Reference | Facit</title>
                 </Helmet>
 
+                <h1  id = "naslov" >NAŠE REFERENCE
+                <hr></hr>
+                </h1>
 
-                <h1 style={{ textAlign: 'center' }}> NAŠE REFERENCE</h1>
                 <div id="grid">
                     <div style={{ textAlign: 'center' }}>
                         <List
