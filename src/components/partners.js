@@ -65,7 +65,7 @@ class References extends React.Component {
             <div>
 
                 <Helmet>
-                    <title> Pertneri | Facit</title>
+                    <title> Partneri | Facit</title>
                 </Helmet>
 
 
