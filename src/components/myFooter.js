@@ -14,7 +14,6 @@ const MyFooter = () => {
             margin: '0 auto',
             backgroundColor: '#001529',
             width: '100%',
-            marginTop: '3%',
             bottom: '0px'
         }}>
         <Footer style={{

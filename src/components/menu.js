@@ -10,7 +10,8 @@ import {
     ScanOutlined,
     ApartmentOutlined,
     LaptopOutlined,
-    SwitcherOutlined
+    SwitcherOutlined,
+    EnvironmentOutlined
 } from '@ant-design/icons'
 
 
@@ -25,15 +26,15 @@ class MyMenu extends Component {
     }
 
     clickedMenu = () => {
-        let href=window.location.href.split('/');
-        href=href[href.length - 1];
-        this.setState({currentLocation: href});
+        let href = window.location.href.split('/');
+        href = href[href.length - 1];
+        this.setState({ currentLocation: href });
     }
 
     componentWillMount() {
-        let href=window.location.href.split('/');
-        href=href[href.length - 1];
-        this.setState({currentLocation: href});
+        let href = window.location.href.split('/');
+        href = href[href.length - 1];
+        this.setState({ currentLocation: href });
     }
 
 
@@ -43,21 +44,26 @@ class MyMenu extends Component {
             <div id="menuContainer">
 
                 <div style={{ float: 'left', width: '10%', textAlign: 'left' }}>
-                    <a  href="/">
-                        <img  src={Logo} alt="Logo"/> 
+                    <a href="/">
+                        <img src={Logo} alt="Logo" />
                     </a>
                 </div>
 
-                <div style={{ float: 'right', width: '10%', fontSize: '20pt' }}>
+                <div style={{ float: 'right', width: '15%', fontSize: '20pt' }}>
                     <a target="_blank" rel="noopener noreferrer" href="mailto:facit@facit.ba">
                         <MailOutlined />
                     </a>
+                    <span style={{width: '3px'}}> </span>
+                    <a style = {{marginLeft: '10%'}} target = "_blank" href = "https://www.google.com/maps/place/Facit+d.o.o./@43.8408702,18.3325361,17z/data=!4m5!3m4!1s0x4758c929efc7f57d:0xe752e9e3a5f54102!8m2!3d43.8408818!4d18.3315383">
+                        <EnvironmentOutlined />
+                    </a>
+                    
                 </div>
 
 
 
 
-                <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['/' + this.state.currentLocation]} selectedKeys={['/' + this.state.currentLocation]} onClick = {() => {this.clickedMenu();}}>
+                <Menu mid="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['/' + this.state.currentLocation]} selectedKeys={['/' + this.state.currentLocation]} onClick={() => { this.clickedMenu(); }}>
 
                     <Menu.Item id="menuItem" key='/'>
                         <Link to="/">
@@ -77,7 +83,7 @@ class MyMenu extends Component {
                         <Menu.Item id="submenuItem" key="ovdje kad se path promijeni"> <PrinterOutlined /> Štampači </Menu.Item>
                         <Menu.Item id="submenuItem" key="22"> <ApartmentOutlined /> Multifunkcionalni uređaji </Menu.Item>
                         <Menu.Item id="submenuItem" key="23"> <SwitcherOutlined /> Produkcijski uređaji </Menu.Item>
-                        <Menu.Item id="submenuItem" key="24"> <LaptopOutlined  /> IT oprema </Menu.Item>
+                        <Menu.Item id="submenuItem" key="24"> <LaptopOutlined /> IT oprema </Menu.Item>
                         <Menu.Item id="submenuItem" key="25"> <ScanOutlined /> Potrošni materijal </Menu.Item>
                     </SubMenu>
 
