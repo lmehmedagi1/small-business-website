@@ -17,6 +17,7 @@ import USAID from '../res/Reference/USAID.png';
 import mylan from '../res/Reference/mylan.jpg';
 import unchr from '../res/Reference/unchr.png';
 import banner from '../res/bannerHome.jpg';
+import Map from '..//res/map.jpg'
 
 import {
     CalendarOutlined,
@@ -283,6 +284,10 @@ class Home extends React.Component {
                     </div>
 
                 </div>
+
+                <div style = {{marginTop: '5%'}}>
+                        <img src={Map} alt="Lokacija" style={{ width: '100%'}} />
+                    </div>
 
             </div>
 

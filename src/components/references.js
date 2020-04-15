@@ -46,6 +46,10 @@ import VKS from '../res/Reference/VKS.jpg';
 import ZERS from '../res/Reference/ZERS.png';
 import zikKS from '../res/Reference/zikKS.png';
 
+import vSud from '../res/Reference/vSud.jpg';
+import tekakanj from '../res/Reference/tekakanj.jpg';
+import osce from '../res/Reference/osce.jpg';
+import finPo from '../res/Reference/finPo.jpg';
 
 
 const newData =
@@ -126,6 +130,11 @@ const newData =
             link: "https://www.izbori.ba/Default.aspx?Lang=3"
         },
         {
+            src: finPo,
+            alt: "Finansijska policija",
+            link: "http://www.fbihvlada.gov.ba/english/ministarstva/finansijska_policija.php"
+        },
+        {
             src: FMUP,
             alt: "Core",
             link: "http://core.ba/"
@@ -196,11 +205,18 @@ const newData =
             src: osa,
             alt: "OSA",
             link: "http://www.osa-oba.gov.ba/"
-        }, {
+        },
+        {
+            src: osce,
+            alt: "OSCE",
+            link: "https://www.osce.org/"
+        },
+        {
             src: PSBiH,
             alt: "PSBiH",
             link: "https://www.parlament.ba/"
         },
+
         {
             src: RMUBreza,
             alt: "RMU Breza",
@@ -225,6 +241,11 @@ const newData =
             src: sudska,
             alt: "Sudska policija FBIH",
             link: "https://sudpol-fbih.pravosudje.ba/"
+        },
+        {
+            src: tekakanj,
+            alt: "Termoelektrana Kakanj",
+            link: "https://www.epbih.ba/stranica/termoelektrane#termoelektrana-kakanj"
         },
         {
             src: unchr,
@@ -256,7 +277,13 @@ const newData =
             alt: "Opcina Centar",
             link: "http://www.centar.ba/"
         },
-               {
+        {   
+            src: vSud,
+            alt: "Vrhovni sud",
+            link: "https://vsud-fbih.pravosudje.ba/"
+
+        },
+        {
             src: ZERS,
             alt: "Institut za zaštitu i ekologiju Republike Srpkske",
             link: "https://www.institutzei.net/en/"
@@ -286,7 +313,7 @@ class References extends React.Component {
                     <title>Reference | Facit</title>
                 </Helmet>
 
-                <h1  id = "naslov" >NAŠE REFERENCE
+                <h1 id="naslov" >NAŠE REFERENCE
                 <hr></hr>
                 </h1>
 
@@ -303,7 +330,7 @@ class References extends React.Component {
                             renderItem={item => (
                                 <div id="reference" >
                                     <a href={item.link} target="_blank">
-                                        <img id = "slika"  src={item.src} alt={item.alt} key={item.src} />
+                                        <img id="slika" src={item.src} alt={item.alt} key={item.src} />
                                     </a>
 
                                 </div>
