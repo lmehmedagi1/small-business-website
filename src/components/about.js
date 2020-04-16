@@ -9,12 +9,21 @@ import Kontakti from './kontakti'
 
 const About = () => {
     return (
+
+        <div>
+            <div id="naslovNasaPrica">
+                <div id="prica">
+                NAŠA PRIČA
+                </div>
+            </div>
+        
         <div id="container">
 
             <Helmet>
                 <title>O nama | Facit</title>
             </Helmet>
 
+            
 
             <div id="mainText">
 
@@ -39,11 +48,12 @@ const About = () => {
 
                 <div className="tekst">
 
-                    <p className="left">
+                    <p className="leftCilj">
                             
-                    <h1> NAŠ CILJ </h1>
-                    <hr></hr>
-                        Cilj nam je ostvariti partnerske odnose sa našim kupcima i postati dio njihovog tima. Autorizirani smo prodajni i servisni centar vodećeg proizvođača opreme i naprednih rješenja za proizvodnju i upravljanje dokumentima - <b>Xerox</b>. To nam daje mogućnost da implementiramo inovativna rješenja i nove tehnologije i još više unaprijedimo brigu o našim korisnicima. Također, dio smo <b> "Microsoft Partner Network"-a </b> te svojim kupcima možemo ponuditi najbolja software-ska rješenja iz oblasti operativnih sistema i alata za obradu dokumenata.
+                        <h1> NAŠ CILJ </h1>
+                        <hr></hr>
+                        Cilj nam je ostvariti partnerske odnose sa našim kupcima i postati dio njihovog tima. Autorizirani smo prodajni i servisni centar vodećeg proizvođača opreme i naprednih rješenja za proizvodnju i upravljanje dokumentima - <b>Xerox</b>. To nam daje mogućnost da implementiramo inovativna rješenja i nove tehnologije i još više unaprijedimo brigu o našim korisnicima. Predanim i kontinuiniranim radom, naš portfolio smo proširili i na jedan od vodećih brendova u svojo branši – <b>DELL</b> gdje smo također stekli partnerski status. Također, dio smo <b>"Microsoft Partner Network"-a</b> te svojim kupcima možemo ponuditi najbolja software-ska rješenja iz oblasti operativnih sistema i alata za obradu dokumenata.
+                        
                     </p>
                 </div>
 
@@ -57,7 +67,7 @@ const About = () => {
                         <h1> NAŠA PONUDA </h1>
                         <hr></hr>
                             Impresivnom i raznovrsnom ponudom opreme za uredsku i produkcijsku upotrebu možemo odgovoriti i najzahtjevnijim kupcima koji traže optimalni odnos cijene i kvaliteta. Kvalitetna oprema kombinirana sa inovativnim softverskim rješenjima garantuje reduciranje troškova poslovanja u cjelini. Ovakva kombinacija također omogućava virtualno upravljanje dokumentima bilo kojih formata integrirajući ih kroz cijelo preduzeće. Zahvaljujući stalnom tehničkom usavršavanju, naše osoblje je posvećeno zadovoljstvu korisnika kontrolom kvaliteta usluga i savjetovanjem o korištenju tehničkih resursa. Uz to veoma smo ponosni na ekspeditivnost kojom kupcima osiguravamo snabdijevanje potrošnim materijalom i papirom.
-
+                    
                   </p>
 
                     </div>
@@ -80,10 +90,33 @@ const About = () => {
 
                 </div>
 
-                <Kontakti/>
+                
 
             </div>
+            
         </div >
+
+            <div id="newText">
+            
+                <p>
+                <hr></hr>
+                Integrišući profesionalnost, pouzdanost i povjerenje postavljamo visoke standarde u razvijanju partnerskih odnosa sa kupcima i posvećeni smo prevazilaženju njihovih očekivanja. Želimo biti prepoznatljivi po izvrsnosti i kvalitetu usluga. Usmjereni ka istinskim vrijednostima postavljamo korisnike u vrh naše organizacione strukture, a mi se trudimo biti postojan dio njihovog tima.
+                <hr></hr>
+                </p>
+                
+            </div>
+
+            <div id="naslovNasTim">
+                <div id="prica">
+                NAŠ TIM
+                </div>
+                <div id="naslovZaTim">
+                S ponosom Vam predstavljamo talentovane pojedince koji čine Facit porodicu
+                </div>
+            </div>
+
+            <Kontakti/>
+        </div>
 
     );
 };
