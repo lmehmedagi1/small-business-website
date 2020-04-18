@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Menu, Button } from 'antd';
 import { Link } from "react-router-dom";
 import Logo from '../res/logo.png';
-import { storage } from '../firebase';
+
 
 import {
     CaretDownOutlined,
@@ -22,16 +22,7 @@ const { SubMenu } = Menu;
 
 class MyMenu extends Component {
 
-    onClick = () => {
-
-        console.log("button radi");
-
-        storage.ref().child("TP 2019-20 Predavanje 8_a.pdf").getDownloadURL().then(url => {
-
-            window.open(url);
-            console.log(url);
-        })
-    }
+    
 
     state = {
         currentLocation: ''
@@ -72,7 +63,7 @@ class MyMenu extends Component {
                     </a>
 
 
-                    <Button onClick={() => { this.onClick(); }} > Molim te proradi </Button>
+                    
 
 
                 </div>

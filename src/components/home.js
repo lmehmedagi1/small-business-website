@@ -19,6 +19,8 @@ import unchr from '../res/Reference/unchr.png';
 import banner from '../res/bannerHome.jpg';
 import Map from '..//res/map.jpg'
 
+import { storage } from '../firebase';
+
 import {
     CalendarOutlined,
     SmileOutlined,
@@ -79,6 +81,16 @@ class Home extends React.Component {
         }
     }
 
+    onClick = () => {
+
+        console.log("button radi");
+
+        storage.ref().child("TP 2019-20 Predavanje 8_a.pdf").getDownloadURL().then(url => {
+
+            window.open(url);
+            console.log(url);
+        })
+    }
 
     render() {
         return (
@@ -218,6 +230,9 @@ class Home extends React.Component {
                 </div>
 
 
+                <div id="showAllButton" style={{marginTop: '35px'}}>
+                        <Button id="dugme" type="primary" onClick={() => {this.onClick(); }}>SKINI TP PDF</Button>
+                    </div>
 
                 <div id="partneriHome">
                     <h1 style={{ textAlign: 'center' }}> NAŠI PARTNERI</h1>
@@ -285,9 +300,13 @@ class Home extends React.Component {
 
                 </div>
 
-                <div style = {{marginTop: '5%'}}>
+                <a style={{ marginLeft: '10%' }} target="_blank" href="https://www.google.com/maps/place/Facit+d.o.o./@43.8408702,18.3325361,17z/data=!4m5!3m4!1s0x4758c929efc7f57d:0xe752e9e3a5f54102!8m2!3d43.8408818!4d18.3315383">
+                    <div style = {{marginTop: '5%'}}>
                         <img src={Map} alt="Lokacija" style={{ width: '100%'}} />
                     </div>
+
+                </a>
+                
 
             </div>
 
