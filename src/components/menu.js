@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Menu, Button } from 'antd';
 import { Link } from "react-router-dom";
 import Logo from '../res/logo.png';
+import { storage } from '../firebase';
 
 import {
     CaretDownOutlined,
@@ -20,6 +21,17 @@ import {
 const { SubMenu } = Menu;
 
 class MyMenu extends Component {
+
+    onClick = () => {
+
+        console.log("button radi");
+
+        storage.ref().child("TP 2019-20 Predavanje 8_a.pdf").getDownloadURL().then(url => {
+
+            window.open(url);
+            console.log(url);
+        })
+    }
 
     state = {
         currentLocation: ''
@@ -53,11 +65,16 @@ class MyMenu extends Component {
                     <a target="_blank" rel="noopener noreferrer" href="mailto:facit@facit.ba">
                         <MailOutlined />
                     </a>
-                    <span style={{width: '3px'}}> </span>
-                    <a style = {{marginLeft: '10%'}} target = "_blank" href = "https://www.google.com/maps/place/Facit+d.o.o./@43.8408702,18.3325361,17z/data=!4m5!3m4!1s0x4758c929efc7f57d:0xe752e9e3a5f54102!8m2!3d43.8408818!4d18.3315383">
+                    <span style={{ width: '3px' }}> </span>
+                    <a style={{ marginLeft: '10%' }} target="_blank" href="https://www.google.com/maps/place/Facit+d.o.o./@43.8408702,18.3325361,17z/data=!4m5!3m4!1s0x4758c929efc7f57d:0xe752e9e3a5f54102!8m2!3d43.8408818!4d18.3315383">
                         <EnvironmentOutlined />
+
                     </a>
-                    
+
+
+                    <Button onClick={() => { this.onClick(); }} > Molim te proradi </Button>
+
+
                 </div>
 
 
