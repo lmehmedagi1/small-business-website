@@ -1,0 +1,124 @@
+#root{
+    height: 100%;
+}
+
+#typedText {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#typedTextContainer {
+    position: absolute; 
+    top: 90px; 
+    width: 100%;
+}
+
+#typedTextWithCursor {
+    color: @primary;
+    font-size: 16px;
+    width: 25%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#missionText {
+    color: darken(@quick-silver, 50%);
+    font-size: 16px;
+    width: 25%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#sloganText {
+    color: @primary;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#gridStatistics {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+
+    .gridColumnItem {
+        border-right: 1px solid @primary;
+    }
+
+    :last-child {
+        border-right: none;
+    }
+
+    .countUpStyle {
+        color: @primary;
+        font-size: 40px;
+    }
+
+    .countUpDescription {
+        color: darken(@quick-silver, 50%);
+        width: 90%;
+        font-size: medium;
+    }
+
+    hr.vertical {
+        height:100%; /* you might need some positioning for this to work, see other questions about 100% height */
+        width:0;
+        border:1px solid black;
+    }
+}
+
+#showAllButton {
+    width: 100%;
+    text-align: center;
+}
+
+#gride{
+    margin: 0 auto;
+    width: 75%;
+
+    .ant-list{
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    .ant-row{
+        text-align: center;
+    }
+}
+
+#referenca {
+    width: 33%;
+    filter: none
+}
+
+#slike {
+    width: 190px;
+    height: 120px;
+    margin: 20px;
+    border: solid 2px grey;
+
+}
+
+#partneriHome {
+    margin-top: 3%;
+}
+
+#referenceHome {
+    margin-top: 3%;
+}
+
+#dugme {
+width: 10%;
+height: 2%;
+font-weight: bold;
+}
+
+.ant-layout-content{
+background-size: cover;  
+min-height: 100%;
+}
+
+.layout{
+    min-height: 100%;
+}
